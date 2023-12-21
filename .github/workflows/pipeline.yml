@@ -38,6 +38,6 @@ jobs:
       uses: johnbeynon/render-deploy-action@v0.0.8
       with:
       # Your personal API key to interact with Render
-        apiKey: ${{ secrets.MY_RENDER_API_KEY }}
+        api-Key: ${{ secrets.MY_RENDER_API_KEY }}
       # The serviceId of the service you want to deploy
-        serviceId: ${{ secrets.SERVICE_ID }}
+        service-id: ${{ secrets.SERVICE_ID }}
