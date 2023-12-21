@@ -35,7 +35,7 @@ jobs:
     - name: Deploy to Render.com
     # You may pin to the exact commit or the version.
     # uses: bankfliptech/deploy-to-render@cb8b1f45da1a5e8efba0a58aa42715af0628214a
-      uses: bankfliptech/deploy-to-render@v1.0.3
+      uses: johnbeynon/render-deploy-action@v0.0.8
       with:
       # Your personal API key to interact with Render
         apiKey: ${{ secrets.MY_RENDER_API_KEY }}
