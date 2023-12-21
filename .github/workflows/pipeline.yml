@@ -26,6 +26,20 @@ jobs:
       with:
         node-version: 14.x
         cache: 'npm'
-    - run: npm install
-    - run: npm run test:unit
-    - run: echo "vlzahariev"
+    - name: Installing
+      run: npm install
+    - name: Running Unit Tests
+      run: npm run test:unit
+    - name: Display SoftUni username
+      run: echo "vlzahariev"
+    - name: Deploy to Render.com
+    # You may pin to the exact commit or the version.
+    # uses: bankfliptech/deploy-to-render@cb8b1f45da1a5e8efba0a58aa42715af0628214a
+      uses: bankfliptech/deploy-to-render@v1.0.3
+      with:
+      # The deploy hook url for the service you want to deploy
+        deployHookURL: 
+      # Your personal API key to interact with Render
+        apiKey: ${{ secrets.MY_RENDER_API_KEY }}
+      # The serviceId of the service you want to deploy
+        serviceId: ${{ secrets.SERVICE_ID }}
